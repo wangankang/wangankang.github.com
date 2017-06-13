@@ -6,25 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>[译]永远不要改变你的Launcher Activity | 勿忘初心，方得始终</title>
+  <title>[译]永远不要改变你的Launcher Activity | cornor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
 <meta name="keywords" content="快捷方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[译]永远不要改变你的Launcher Activity">
 <meta property="og:url" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/index.html">
-<meta property="og:site_name" content="勿忘初心，方得始终">
+<meta property="og:site_name" content="cornor">
 <meta property="og:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/E2297887-5DC8-4584-9239-3FCFFB398F39.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/B30F4869-F205-4430-BF04-B385937F9B42.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/11690263-9BC5-494B-A64C-410A440256C1.png">
-<meta property="og:updated_time" content="2017-06-13T03:32:52.000Z">
+<meta property="og:updated_time" content="2017-06-13T03:55:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译]永远不要改变你的Launcher Activity">
 <meta name="twitter:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
 <meta name="twitter:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/E2297887-5DC8-4584-9239-3FCFFB398F39.png">
   
-    <link rel="alternative" href="/atom.xml" title="勿忘初心，方得始终" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="cornor" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -56,6 +56,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Cornor</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">勿忘初心，方得始终</p>
 		
 
 		<nav class="header-menu">
@@ -114,6 +116,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Cornor</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>勿忘初心，方得始终<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -179,7 +183,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a><br><a id="more"></a></p>
+<p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a> </p>
+<a id="more"></a>
 <h3 id="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"><a href="#更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！" class="headerlink" title="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"></a>更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！</h3><p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
 <p>想象这样一个场景：一款应用已经在应用市场好几年了，已经积累了很多用户。虽然不是必需的，但是对某些终端用户来说还是有一定价值的，特别是对于开发者本人。大多数的智能手机用户并不是太熟悉系统是如何运转的。桌面上的快捷方式或者小组件对于他们来说是最容易理解的打开应用的方式。想一下，如果桌面上快捷方式的图标消失了会怎么样？当你更改了启动Activity后，这种现象确实会出现的。</p>
 <p>在AndroidManifest.xml清单文件里的代码是这样的：</p>
@@ -204,32 +209,6 @@
 <h5 id="重要提示：由于Android解析mainfest文件是从上到下-所以一定要确保alias标签放到真实的TargetActivity-标签下面，如果放在上面的话，虽然可以正确编译，但安装会出错！"><a href="#重要提示：由于Android解析mainfest文件是从上到下-所以一定要确保alias标签放到真实的TargetActivity-标签下面，如果放在上面的话，虽然可以正确编译，但安装会出错！" class="headerlink" title="重要提示：由于Android解析mainfest文件是从上到下,所以一定要确保alias标签放到真实的TargetActivity 标签下面，如果放在上面的话，虽然可以正确编译，但安装会出错！"></a>重要提示：由于Android解析mainfest文件是从上到下,所以一定要确保alias标签放到真实的TargetActivity <activity>标签下面，如果放在上面的话，虽然可以正确编译，但安装会出错！</activity></h5>
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>false<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/a6x04557ibqup5nkl9tir17.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -347,6 +326,9 @@
     </div>
   </div>
 </footer>
+本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -419,18 +401,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Fight</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Shocking</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">快捷方式</a>
