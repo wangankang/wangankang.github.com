@@ -8,17 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>META-INF目录 | cornor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+  <meta name="description" content="Android APK文件解压缩后会生成META-INF目录 V1签名方案该目录下会生成至少三个文件分别为MANIFEST.MF、CERT.SF、CERT.SF，用不同的证书和签名方式得到的名字可能不同，以及对于多个证书的情况,就会对应有多个.MF,.SF,CERT.RSA文件 1.MANIFEST.MF  apk当中的所有原始文件信息用摘要算法如SHA1计算得到摘要信息并用base64编码保存">
 <meta name="keywords" content="打包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="META-INF目录">
 <meta property="og:url" content="http://yoursite.com/2018/01/12/META-INF目录/index.html">
 <meta property="og:site_name" content="cornor">
-<meta property="og:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
-<meta property="og:updated_time" content="2018-01-12T09:18:23.000Z">
+<meta property="og:description" content="Android APK文件解压缩后会生成META-INF目录 V1签名方案该目录下会生成至少三个文件分别为MANIFEST.MF、CERT.SF、CERT.SF，用不同的证书和签名方式得到的名字可能不同，以及对于多个证书的情况,就会对应有多个.MF,.SF,CERT.RSA文件 1.MANIFEST.MF  apk当中的所有原始文件信息用摘要算法如SHA1计算得到摘要信息并用base64编码保存">
+<meta property="og:image" content="http://yoursite.com/2018/01/12/META-INF目录/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/01/12/META-INF目录/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/01/12/META-INF目录/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/01/12/META-INF目录/4.jpg">
+<meta property="og:updated_time" content="2018-01-12T09:44:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="META-INF目录">
-<meta name="twitter:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+<meta name="twitter:description" content="Android APK文件解压缩后会生成META-INF目录 V1签名方案该目录下会生成至少三个文件分别为MANIFEST.MF、CERT.SF、CERT.SF，用不同的证书和签名方式得到的名字可能不同，以及对于多个证书的情况,就会对应有多个.MF,.SF,CERT.RSA文件 1.MANIFEST.MF  apk当中的所有原始文件信息用摘要算法如SHA1计算得到摘要信息并用base64编码保存">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/12/META-INF目录/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="cornor" type="application/atom+xml">
   
@@ -179,12 +184,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a> </p>
-<a id="more"></a>
-<h3 id="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"><a href="#更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！" class="headerlink" title="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"></a>更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！</h3><p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
-<p>想象这样一个场景：一款应用已经在应用市场好几年了，已经积累了很多用户。虽然不是必需的，但是对某些终端用户来说还是有一定价值的，特别是对于开发者本人。大多数的智能手机用户并不是太熟悉系统是如何运转的。桌面上的快捷方式或者小组件对于他们来说是最容易理解的打开应用的方式。想一下，如果桌面上快捷方式的图标消失了会怎么样？当你更改了启动Activity后，这种现象确实会出现的。</p>
-<p>在AndroidManifest.xml清单文件里的代码是这样的：</p>
-<h4 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h4>
+<p>Android APK文件解压缩后会生成META-INF目录</p>
+<h4 id="V1签名方案"><a href="#V1签名方案" class="headerlink" title="V1签名方案"></a>V1签名方案</h4><p>该目录下会生成至少三个文件分别为MANIFEST.MF、CERT.SF、CERT.SF，用不同的证书和签名方式得到的名字可能不同，以及对于多个证书的情况,就会对应有多个.MF,.SF,CERT.RSA文件</p>
+<p>1.MANIFEST.MF</p>
+<img src="/2018/01/12/META-INF目录/1.jpg" alt="[MANIFEST.MF]" title="[MANIFEST.MF]">
+<p>apk当中的所有原始文件信息用摘要算法如SHA1计算得到摘要信息并用base64编码保存</p>
+<p>Name:对应文件在apk中的路径<br>SHA1-Digest:对应相应文件摘要信息的base64编码值，摘要算法采用SHA1</p>
+<p>2.CERT.SF</p>
+<img src="/2018/01/12/META-INF目录/2.jpg" alt="[CERT.SF]" title="[CERT.SF]">
+<p>.MF文件的摘要信息&amp;.MF文件当中每个条目再用摘要算法计算得到的摘要信息并用Base64编码保存</p>
+<p>第3行：SHA1-Digest-Manifest  取MANIFEST.MF文件的摘要信息<br>第5行开始就是遍历.MF文件中的条目，分别计算摘要信息然后Base64编码</p>
+<p>注：自己在打包自己的apk测试中发现MANIFEST.MF和CERT.SF文件中除了前几行的内容不一样外，其它部分都是一样的，这一点看起来跟前面的描述有冲突，困惑了很久，麻烦有知道原因的告知，多谢！</p>
+<p>3.CERT.RSA</p>
+<img src="/2018/01/12/META-INF目录/3.jpg" alt="[CERT.RSA]" title="[CERT.RSA]">
+<p>无法直接查看，可通过以下命令</p>
+<p>openssl pkcs7 -inform DER -in CERT.RSA -noout -print_certs -text</p>
+<p>得到以下输出：</p>
+<img src="/2018/01/12/META-INF目录/4.jpg" alt="[CERT]" title="[CERT]">
+<p>存放证书信息，公钥信息，以及用私钥对.SF文件的数据进行加密得到的签名信息，这段数据是无法伪造的，除非有私钥，另外.RSA文件还记录了所用的签名算法等信息。</p>
+<h4 id="V2签名方案"><a href="#V2签名方案" class="headerlink" title="V2签名方案"></a>V2签名方案</h4><p>该目录下只会生成MANIFEST.MF文件</p>
+<p>参考文章：<br><a href="https://cloud.tencent.com/developer/article/1006237" title="分析 Android V2 新签名打包机制" target="_blank" rel="external">分析 Android V2 新签名打包机制</a><br><a href="https://source.android.com/security/apksigning/v2" title="APK 签名方案 v2" target="_blank" rel="external">APK 签名方案 v2</a><br><a href="http://www.androidchina.net/4187.html" target="_blank" rel="external">Android签名机制之—签名过程详解</a></p>
+
       
 
       
@@ -391,11 +411,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">快捷方式</a>
+                <a href="javascript:void(0)" class="js-tag color3">打包</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">打包</a>
+                <a href="javascript:void(0)" class="js-tag color5">快捷方式</a>
               </li>
             
             <div class="clearfix"></div>
