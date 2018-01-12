@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>[译]永远不要改变你的Launcher Activity | cornor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+  <meta name="description" content="自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。">
 <meta name="keywords" content="快捷方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[译]永远不要改变你的Launcher Activity">
 <meta property="og:url" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/index.html">
 <meta property="og:site_name" content="cornor">
-<meta property="og:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+<meta property="og:description" content="自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/E2297887-5DC8-4584-9239-3FCFFB398F39.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/B30F4869-F205-4430-BF04-B385937F9B42.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/11690263-9BC5-494B-A64C-410A440256C1.png">
-<meta property="og:updated_time" content="2017-06-13T03:55:01.000Z">
+<meta property="og:updated_time" content="2018-01-12T09:50:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[译]永远不要改变你的Launcher Activity">
-<meta name="twitter:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+<meta name="twitter:description" content="自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。">
 <meta name="twitter:image" content="http://yoursite.com/2017/06/13/译-永远不要改变你的Launcher-Activity/E2297887-5DC8-4584-9239-3FCFFB398F39.png">
   
     <link rel="alternative" href="/atom.xml" title="cornor" type="application/atom+xml">
@@ -183,9 +183,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a> </p>
+<p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
 <a id="more"></a>
-<h3 id="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"><a href="#更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！" class="headerlink" title="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"></a>更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！</h3><p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
+<h3 id="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"><a href="#更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！" class="headerlink" title="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"></a>更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！</h3><p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a> </p>
+<p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
 <p>想象这样一个场景：一款应用已经在应用市场好几年了，已经积累了很多用户。虽然不是必需的，但是对某些终端用户来说还是有一定价值的，特别是对于开发者本人。大多数的智能手机用户并不是太熟悉系统是如何运转的。桌面上的快捷方式或者小组件对于他们来说是最容易理解的打开应用的方式。想一下，如果桌面上快捷方式的图标消失了会怎么样？当你更改了启动Activity后，这种现象确实会出现的。</p>
 <p>在AndroidManifest.xml清单文件里的代码是这样的：</p>
 <h4 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=<span class="string">".MainActivity"</span></div><div class="line">    android:label=<span class="string">"@string/app_name"</span>&gt;</div><div class="line">    &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name=<span class="string">"android.intent.action.MAIN"</span>/&gt;</div><div class="line">        &lt;category android:name=<span class="string">"android.intent.category.LAUNCHER"</span>/&gt;</div><div class="line">    &lt;/intent-filter&gt;</div><div class="line">&lt;/activity&gt;</div><div class="line">&lt;activity</div><div class="line">    android:name=<span class="string">".MainActivity2"</span></div><div class="line">    android:label=<span class="string">"@string/app_name"</span>&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure>
@@ -422,6 +423,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">快捷方式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">打包签名</a>
               </li>
             
             <div class="clearfix"></div>
