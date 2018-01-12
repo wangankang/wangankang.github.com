@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | cornor</title>
+  <title>META-INF目录 | cornor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="勿忘初心，方得始终">
-<meta property="og:type" content="website">
-<meta property="og:title" content="cornor">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+<meta name="keywords" content="打包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="META-INF目录">
+<meta property="og:url" content="http://yoursite.com/2018/01/12/META-INF目录/index.html">
 <meta property="og:site_name" content="cornor">
-<meta property="og:description" content="勿忘初心，方得始终">
+<meta property="og:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
+<meta property="og:updated_time" content="2018-01-12T09:18:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cornor">
-<meta name="twitter:description" content="勿忘初心，方得始终">
+<meta name="twitter:title" content="META-INF目录">
+<meta name="twitter:description" content="原文链接:http://andrzejchm.github.io/android/never_change_your_launcher_activity/">
   
     <link rel="alternative" href="/atom.xml" title="cornor" type="application/atom+xml">
   
@@ -156,36 +158,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-META-INF目录" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/12/META-INF目录/" class="archive-article-date">
-  	<time datetime="2018-01-12T09:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/12/META-INF目录/">META-INF目录</a>
+    <h1 class="article-title" itemprop="name">
+      META-INF目录
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/12/META-INF目录/" class="archive-article-date">
+  	<time datetime="2018-01-12T09:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>原文链接:<a href="http://andrzejchm.github.io/android/never_change_your_launcher_activity/" target="_blank" rel="external">http://andrzejchm.github.io/android/never_change_your_launcher_activity/</a> </p>
+<a id="more"></a>
+<h3 id="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"><a href="#更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！" class="headerlink" title="更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！"></a>更新：文章末尾提供了该问题的解决方案，一定要阅读到最后哦！</h3><p>自从Android诞生以来，每个开发者都可以修改自己应用的入口。虽然这是刚需，但有时可能会让你很头痛，特别是如果这个应用能帮你赚钱的话。</p>
+<p>想象这样一个场景：一款应用已经在应用市场好几年了，已经积累了很多用户。虽然不是必需的，但是对某些终端用户来说还是有一定价值的，特别是对于开发者本人。大多数的智能手机用户并不是太熟悉系统是如何运转的。桌面上的快捷方式或者小组件对于他们来说是最容易理解的打开应用的方式。想一下，如果桌面上快捷方式的图标消失了会怎么样？当你更改了启动Activity后，这种现象确实会出现的。</p>
+<p>在AndroidManifest.xml清单文件里的代码是这样的：</p>
+<h4 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,7 +203,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -210,76 +216,87 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/01/12/META-INF目录/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/13/译-永远不要改变你的Launcher-Activity/" class="archive-article-date">
-  	<time datetime="2017-06-13T01:46:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/13/译-永远不要改变你的Launcher-Activity/">[译]永远不要改变你的Launcher Activity</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">快捷方式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/13/译-永远不要改变你的Launcher-Activity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[译]永远不要改变你的Launcher Activity</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -305,8 +322,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
